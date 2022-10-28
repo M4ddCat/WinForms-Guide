@@ -5,66 +5,85 @@
 
 # Создание проекта из шаблона
 Нужно создать приложение Windows Forms с использованием .NET Framework (НЕ .NET Core (на нём делать дольше))
+<br/>
 ![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/1.png)
+<br/>
 Задаём наше название проекта в поле «Имя проекта», выбираем расположение, и выбираем платформу .NET Framework 4.8. Если этой платформы нет, то версию ниже.
+<br/>
 ![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/2.png)
+<br/>
 # Добавление EDMX модели базы данных
 В начале разработки программы нужно создать модель для взаимодействия с нашей базой данных.
 Для этого создадим папку (Пкм по нашему проекту), и назовём её «Model».
+<br/>
 ![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/3.png)
+<br/>
 В дальнейшем будет создано множество других папок, делается это для удобства использования, а так-же за это выдаются дополнительные баллы за грамотную структуру проекта.
 Далее нужно создать EDMX модель. Для этого создаём новый элемент в папке Model
+<br/>
 ![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/4.png)
+<br/>
 В открывшемся окне выбираем вкладку «Данные», в котором нужно выбрать «Модель ADO.NET EDM», назовём её «Model»
+<br/>
 ![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/5.png)
+<br/>
 Откроется окно «Мастер моделей EDM». В нём выбираем «Конструктор EF из базы данных» и жмём далее
+<br/>
 ![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/6.png)
+<br/>
 В следующем окне нужно создать соединение к нашей базе данных. Для этого нужно нажать на кнопку «Создать соединение…»
+<br/>
 ![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/7.png)
+<br/>
 Вводим имя сервера в поле «Имя сервера» 
 Его можно посмотреть в MS SQL Server Management Studio
+<br/>
 ![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/8.png)
+<br/>
 И имя базы данных, которую мы создавали на сервере
+<br/>
 ![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/9.png)
+<br/>
 Жмём «Проверить подключение», чтобы проверить, правильно ли мы ввели названия сервера и базы данных.
 ![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/10.png)
+<br/>
 При успешной проверке закрываем открывшееся окно и жмём ОК.
 У нас появилось подключение к базе данных. Нужно поставить галочку на параметре «Сохранить параметры соединения в App.Config…» и нажать «Далее»
 ![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/11.png)
-
+<br/>
 Выбираем версию EF 6.x и жмём Далее
-![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/12.png)
+![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/12.png)<br/>
 В следующем окне выбираем все объекты, которые нужно включить в модель, если нужно меняем название, и жмём Готово
-![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/13.png)
+![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/13.png)<br/>
 
 В папке Model появилась наша EDMX модель, которую мы будем использовать, когда будем взаимодействовать с данными из базы данных.
-![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/14.png)
+![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/14.png)<br/>
 # Создание форм
 Для начала создадим отдельную папку для форм, аналогично, как мы создавали папку «Model». Назовём её «Forms», и добавим в неё стандартную форму под названием «TemplateForm».
 В свойствах ищем вкладку «Стиль окна», и задаём в ней нашу иконку в подпункте Icon, и поменять шрифт на тот, что указан в ТЗ
-![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/15.png)
+![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/15.png)<br/>
 Далее нужно перейти к коду формы. Для этого нужно нажать пкм по форме и выбрать «Перейти к коду».
-![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/16.png)
+![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/16.png)<br/>
 Здесь мы после строки «InitializeComponent();» добавляем «this.Text = “Beauty saloon”;»
-![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/17.png)
+![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/17.png)<br/>
 Данная строка изменяет свойство Text у формы, которое выступает в роли названия окна при открытии.
 Это нужно, чтобы наследовать данную форму другими формами, чтобы не пришлось каждый раз задавать иконку и менять текст названия окна.
-![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/18.png)
+![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/18.png)<br/>
 # Авторизация
 Для авторизации нужно создать подобную форму, а так-же на будущее нужно создать форму MainForm (не забываем, что создаём формы в специально созданной для этого папке) -
-![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/19.png)
+![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/19.png)<br/>
 После создания формы удалим стандартную созданную форму, которая расположена в корне проекта, а именно Form1
-![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/20.png)
+![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/20.png)<br/>
 
 После удаления нужно открыть файл Program.cs, и изменить в нём запускаемую по умолчанию форму на нашу форму авторизации.
 Вернёмся к нашей форме авторизации, и настроим некоторые компоненты.
 Для TextBox-а пароля нужно задать параметр UseSystemPasswordChar - True
-![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/21.png)
+![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/21.png)<br/>
 Label расположенный между полем для ввода пароля и кнопкой входа должен быть с параметром Visible – False, и должен отображаться только при условии, что капча была введена неправильно.
-![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/22.png)
+![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/22.png)<br/>
 Дальше нужно добавить обработчик нажатия кнопки, для этого жмём на кнопку 2 раза.
 В логике обработчика нажатия нужно добавить проверку на наличие введённым пользователем данных в базе данных.
-![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/23.png)
+![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/23.png)<br/>
 Сперва нужно добавить контекст базы данных. Чтобы это сделать надо импортировать нашу модель в класс формы. Прописываем почти в самом верху следующую конструкцию - «using НазваниеПроекта.Model;»
 ![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/24.png)
 Далее нужно создать объект контекста базы данных. Сделаем это в начале класса.
