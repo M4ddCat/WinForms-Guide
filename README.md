@@ -45,29 +45,34 @@
 ![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/9.png)
 <br/>
 Жмём «Проверить подключение», чтобы проверить, правильно ли мы ввели названия сервера и базы данных.
+<br/>
 ![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/10.png)
 <br/>
 При успешной проверке закрываем открывшееся окно и жмём ОК.
 У нас появилось подключение к базе данных. Нужно поставить галочку на параметре «Сохранить параметры соединения в App.Config…» и нажать «Далее»
+<br/>
 ![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/11.png)
 <br/>
 Выбираем версию EF 6.x и жмём Далее
-![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/12.png)<br/>
+<br/>
+![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/12.png)
+<br/>
 В следующем окне выбираем все объекты, которые нужно включить в модель, если нужно меняем название, и жмём Готово
+<br/>
 ![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/13.png)<br/>
 
 В папке Model появилась наша EDMX модель, которую мы будем использовать, когда будем взаимодействовать с данными из базы данных.
 ![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/14.png)<br/>
 # Создание форм
 Для начала создадим отдельную папку для форм, аналогично, как мы создавали папку «Model». Назовём её «Forms», и добавим в неё стандартную форму под названием «TemplateForm».
-В свойствах ищем вкладку «Стиль окна», и задаём в ней нашу иконку в подпункте Icon, и поменять шрифт на тот, что указан в ТЗ
+В свойствах ищем вкладку «Стиль окна», и задаём в ней нашу иконку в подпункте Icon, и поменять шрифт на тот, что указан в ТЗ<br/>
 ![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/15.png)<br/>
-Далее нужно перейти к коду формы. Для этого нужно нажать пкм по форме и выбрать «Перейти к коду».
+Далее нужно перейти к коду формы. Для этого нужно нажать пкм по форме и выбрать «Перейти к коду».<br/>
 ![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/16.png)<br/>
-Здесь мы после строки «InitializeComponent();» добавляем «this.Text = “Beauty saloon”;»
+Здесь мы после строки «InitializeComponent();» добавляем «this.Text = “Beauty saloon”;»<br/>
 ![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/17.png)<br/>
 Данная строка изменяет свойство Text у формы, которое выступает в роли названия окна при открытии.
-Это нужно, чтобы наследовать данную форму другими формами, чтобы не пришлось каждый раз задавать иконку и менять текст названия окна.
+Это нужно, чтобы наследовать данную форму другими формами, чтобы не пришлось каждый раз задавать иконку и менять текст названия окна.<br/>
 ![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/18.png)<br/>
 # Авторизация
 Для авторизации нужно создать подобную форму, а так-же на будущее нужно создать форму MainForm (не забываем, что создаём формы в специально созданной для этого папке) -
