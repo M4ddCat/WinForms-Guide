@@ -1,6 +1,7 @@
 # WinForms-Guide
 Как сделать приложение на Windows Forms с использованием Entity Framework и LINQ
 ![Image alt](https://github.com/M4ddCat/WinForms-Guide/blob/main/images/title.png)
+<br/>
 Этот гайд я написал в шараге на 4 курсе за автомат, т.к. тот, что был до этого был довольно хреновым
 <br/>
 
